@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    public int Snumber;
-    public int Bnumber;
+    public int Snumber=0;
+    public int Bnumber=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         });
         final TextView BallText  = findViewById(R.id.numball);
         Button  PressBall = findViewById(R.id.BallSpeed);
-        pressStrike.setOnClickListener(new View.OnClickListener() {
+        PressBall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bnumber = Bnumber + 1;
@@ -55,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        finish();
-        System.exit(0);
-        }
+
     }
+}
 
